@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Book Store</h1>
+        <div class="home">
+            <!-- <button><a href="cart.html" class="view-cart-button">View Cart</a> -->
+            <a href="front.html" id="cart-button">Home</a>
+        </div>
+        <div class="cart">
+            <!-- <button><a href="cart.html" class="view-cart-button">View Cart</a> -->
+            <a href="cart.html" id="cart-button">Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <div class="book-container">
+        <div class="book" onclick="showDetails('book1')">
+            <img src="image/book1.jpg" alt="Book 1" class="book-image">
+            <div class="book-info">
+                <h3 class="book-title">Self Confidence</h3>
+                <p class="book-description">Self Confidence that empowers readers to overcome self-doubt and build lasting confidence, offering practical strategies for personal growth.</p>
+                <button onclick="addToCart('book1', event)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="book" onclick="showDetails('book2')">
+            <img src="image/book2.jpg" alt="Book 2" class="book-image">
+            <div class="book-info">
+                <h3 class="book-title">The Little Big Book of Confidence</h3>
+                <p class="book-description">The Little Big Book of Confidence that empowers readers with practical tips and insights to boost their self-confidence and face life's challenges with a positive mindset.</p>
+                <button onclick="addToCart('book2', event)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="book" onclick="showDetails('book3')">
+            <img src="image/book3.jpg" alt="Book 3" class="book-image">
+            <div class="book-info">
+                <h3 class="book-title">Leadership and Politics</h3>
+                <p class="book-description">Leadership and Politics the intricate relationship between leadership and the political landscape, offering insights into how effective leadership can shape and influence political dynamics.</p>
+                <button onclick="addToCart('book3', event)">Add to Cart</button>
+            </div>
+        </div>
+        <div class="book" onclick="showDetails('book4')">
+            <img src="image/book4.jpg" alt="Book 4" class="book-image">
+            <div class="book-info">
+                <h3 class="book-title">Elevate Your Leadership</h3>
+                <p class="book-description">Elevate Your Leadership provides actionable strategies and insights to help individuals enhance their leadership skills, fostering growth, innovation, and team success.</p>
+                <button onclick="addToCart('book4', event)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="book" onclick="showDetails('book5')">
+            <img src="image/book5.jpg" alt="Book 5" class="book-image">
+            <div class="book-info">
+                <h3 class="book-title">Green Thumb Poppy</h3>
+                <p class="book-description">Green Thumb Poppy is a charming guide that blends gardening wisdom with heartwarming stories, perfect for anyone looking to cultivate both plants and a deeper connection with nature.</p>
+                <button onclick="addToCart('book5', event)">Add to Cart</button>
+            </div>
+        </div>
+
+      <!-- Add more books as needed -->
+    </div>
+    
+    <div id="book-details" class="book-details">
+        <span class="close" onclick="hideDetails()">&times;</span>
+        <h2 id="detail-title"></h2>
+        <p id="detail-description"></p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
